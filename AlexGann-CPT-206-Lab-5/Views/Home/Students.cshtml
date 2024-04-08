@@ -1,0 +1,54 @@
+﻿@model IEnumerable<StudentProfile>
+<h2>@ViewData["Title"]</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Student Name</th>
+			<th>GPA</th>
+			<th>Email</th>
+			<th>Major</th>
+			<th>Phone Number</th>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Verified</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model is not null)
+		{
+			@foreach (StudentProfile s in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => s.Id)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.Name)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.GPA)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.StudentEmail)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.Major)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.PhoneNumber)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.StudentUserName)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.password)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => s.isVerified)
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
