@@ -1,0 +1,5 @@
+The GetStudentProfiles method retrieves all student profiles from the database asynchronously using Entity Framework's ToListAsync method. The GetStudentProfile method
+retrieves a single student profile by ID from the database asynchronously using Entity Framework's FindAsync method. The PutStudentProfile method updates a student 
+profile in the database. It sets the state of the provided studentProfile object to Modified, which tells Entity Framework to update the corresponding entity in the 
+database. The PostStudentProfile method adds a new student profile to the database and returns a CreatedAtAction result with the newly created profile's ID.The 
+DeleteStudentProfile method removes a student profile from the database asynchronously. Great job overall in my view.
